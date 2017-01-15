@@ -1,0 +1,198 @@
+<!--!建立一个基础app。在all.js中-->
+<html lang="zh-cn"  >
+<head>
+    <meta charset="gbk" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>LINKOOP领象</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="my.css">
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body >
+
+	<!--头部-->
+    <header   >
+        <h1 class="a-img"><a href="#"><img src="logo.png" alt="LINKOOP领象" width="127" height="32" /></a></h1>
+        <hgroup class="top-message fr">
+			<span><i class="iconfont icon-power-top"></i><a  >注销</a></span>
+			<span><i class="iconfont icon-locked-top"></i><a >修改密码</a></span>
+			<span><i class="iconfont icon-user-top"></i>Welcome wyk</span>
+		</hgroup>
+    </header>
+
+    <section id="container" >
+		<!--导航栏-->
+        <aside id="nav-side">
+            <nav class="font-center">
+			   <a  href="home.html" ><i class="iconfont icon-home"></i>首页</a>
+			   <a  href="data.html" ><i class="iconfont icon-data"></i>数据</a>
+			   <a  href="flow.html" ><i class="iconfont icon-flow"></i>流程</a>
+			   <a  href="schema.html" ><i class="iconfont icon-plan"></i>计划</a>
+			   <a  href="moniter.html" ><i class="iconfont icon-computer"></i>监控</a>
+			   <a  href="tag.html" ><i class="iconfont icon-tag"></i>配置</a>
+			   <a  href="user.html" ><i class="iconfont icon-user"></i>用户</a>
+            </nav>
+        </aside>
+
+
+		<!--主体-->
+		 <div id="main-body">
+		 
+<!--首页-->
+			<div class="home-container clearfix" >
+					<div class="panel-row"  >
+						<div class="panel"   >
+							<h3 class="font-center"><i class="iconfont icon-settings"></i>配置</h3>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>标签</th>
+									<td class="font-center"><a href="#">15</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>自定义函数</th>
+									<td class="font-center"><a href="#">2</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="panel-row"  >
+						<div class="panel">
+							<h3 class="font-center"><i class="iconfont icon-settings"></i>数据</h3>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>Dataset</th>
+									<td class="font-center"><a href="#">733</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>Schema</th>
+									<td class="font-center"><a href="#">159</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="panel-row"  >
+						<div class="panel">
+							<h3 class="font-center"><i class="iconfont icon-settings"></i>设计</h3>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>流程</th>
+									<td class="font-center"><a href="#">373</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="panel-row"  >
+						<div class="panel">
+							<h3 class="font-center"><i class="iconfont icon-settings"></i>计划</h3>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>计划</th>
+									<td class="font-center"><a href="#">1033</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>执行</th>
+									<td class="font-center"><a href="#">2076</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="panel-row"  >
+						<div class="panel">
+							<h3 class="font-center"><i class="iconfont icon-settings"></i>监控</h3>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr >
+									<th align="left" width="34%"><i class="iconfont icon-settings"></i>运行中</th>
+									<td class="font-center"><a href="#">0</a></td>
+									<th align="left" width="34%"><i class="iconfont icon-settings"></i>就绪</th>
+									<td class="font-center"><a href="#">1</a></td>
+
+								</tr>
+								<tr>
+									<th align="left" width="34%"><i class="iconfont icon-settings"></i>已成功</th>
+									<td class="font-center"><a href="#">2310</a></td>
+									<th align="left" width="34%"><i class="iconfont icon-settings"></i>已失败</th>
+									<td class="font-center"><a href="#">12</a></td>
+								</tr>
+								<tr>
+									<th align="left" width="34%"><i class="iconfont icon-settings"></i>未知</th>
+									<td class="font-center"><a href="#">0</a></td>
+									<th align="left" width="34%"><i class="iconfont icon-settings"></i>已杀死</th>
+									<td class="font-center"><a href="#">102</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="panel-row"  >
+						<div class="panel">
+							<h3 class="font-center"><i class="iconfont icon-settings"></i>用户</h3>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr >
+									<th align="left" width="48%"><i class="iconfont icon-settings"></i>用户</th>
+									<td class="font-center"><a href="#">7</a></td>
+									<td class="font-center"><a href="#">创建</a></td>
+								</tr>
+
+							</table>
+						</div>
+					</div>
+					<div class="panel-row">
+						<div class="panel" style="height:360px;width:420px">
+							<h3 class="font-center"><i class="iconfont icon-settings"></i>组件状态</h3>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr >
+									<th align="left"><i class="iconfont icon-computer"></i>flow-master</th>
+									<td class="font-center">RUNNING</td>
+									<td class="font-center">node6</td>
+									<td class="font-center">flow-master-0</td>
+								</tr>
+								<tr >
+									<th align="left"><i class="iconfont icon-computer"></i>flow-master</th>
+									<td class="font-center">RUNNING</td>
+									<td class="font-center">node6:17511</td>
+									<td class="font-center">logkeeper-0</td>
+								</tr>
+								<tr >
+									<th align="left"><i class="iconfont icon-computer"></i>flow-master</th>
+									<td class="font-center">RUNNING</td>
+									<td class="font-center">node6</td>
+									<td class="font-center">df-executor-0</td>
+								</tr>
+								<tr >
+									<th align="left"><i class="iconfont icon-computer"></i>flow-master</th>
+									<td class="font-center">RUNNING</td>
+									<td class="font-center">node6:17512</td>
+									<td class="font-center">nifi-executors-0</td>
+								</tr>
+								<tr >
+									<th align="left"><i class="iconfont icon-computer"></i>flow-master</th>
+									<td class="font-center">RUNNING</td>
+									<td class="font-center">node6:17510</td>
+									<td class="font-center">carpo-server-0</td>
+								</tr>
+								<tr >
+									<th align="left"><i class="iconfont icon-computer"></i>flow-master</th>
+									<td class="font-center">RUNNING</td>
+									<td class="font-center">node6</td>
+									<td class="font-center">more-executors-0</td>
+								</tr>
+
+								<tr><td><button class="btn btn-success glyphicon glyphicon-refresh" >刷新</button></td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+ 
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!--!建立一个基础app。在all.js中-->
+<html lang="zh-cn"  >
+<head>
+    <meta charset="gbk" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>LINKOOP领象</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="my.css">
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body >
+
+	<!--头部-->
+    <header   >
+        <h1 class="a-img"><a href="#"><img src="logo.png" alt="LINKOOP领象" width="127" height="32" /></a></h1>
+        <hgroup class="top-message fr">
+			<span><i class="iconfont icon-power-top"></i><a  >注销</a></span>
+			<span><i class="iconfont icon-locked-top"></i><a >修改密码</a></span>
+			<span><i class="iconfont icon-user-top"></i>Welcome wyk</span>
+		</hgroup>
+    </header>
+
+
+    <section id="container" >
+		<!--导航栏-->
+        <aside id="nav-side">
+            <nav class="font-center">
+			   <a  href="home.html" ><i class="iconfont icon-home"></i>首页</a>
+			   <a  href="data.html" ><i class="iconfont icon-data"></i>数据</a>
+			   <a style="background:#003c71;color:#badfff;text-decoration:none;-moz-box-shadow:inset 3px 3px 3px rgba(0,49,100,0.5);-webkit-box-shadow:inset 3px 3px 3px rgba(0,49,100,0.5);box-shadow:inset 3px 3px 3px rgba(0,49,100,0.5);" href="flow.html" ><i class="iconfont icon-flow"></i>流程</a>
+			   <a  href="schema.html" ><i class="iconfont icon-plan"></i>计划</a>
+			   <a  href="moniter.html" ><i class="iconfont icon-computer"></i>监控</a>
+			   <a  href="tag.html" ><i class="iconfont icon-tag"></i>配置</a>
+			   <a  href="user.html" ><i class="iconfont icon-user"></i>用户</a>
+            </nav>
+        </aside>
+
+
+		<!--主体-->
+		 <div id="main-body">
+
+		    <div  class="container-fluid no-padding">
+					<div class = "body-change">
+						<i class="glyphicon glyphicon-list text-info"></i><span style=" margin-right: 2px;">流程</span>
+						
+					<div>
+					 
+					<div class="panel panel-default" >
+						<div class="panel-heading">
+							<div class="row " style = "margin-top:20px;">
+							  <div class="col-md-3">
+								<div class="input-group">
+								  <input type="text" class="form-control " placeholder="请输入检索词"  >
+								  <span class="input-group-btn">
+									<button class="btn btn-primary button-myself" type="button"  ><span class="glyphicon glyphicon-search"  ></span></button>
+								  </span>
+								</div>
+							  </div>
+							  <div class="col-md-3">
+								<div class="input-group">
+								  <span class="input-group-btn">
+									<button class="btn btn-success button-myself" type="button"    ><span class="glyphicon glyphicon-calendar"  ></span></button>
+								  </span>
+								  <input placeholder="请选择时间范围"  class="form-control" type="text"  readonly="readonly" /> 
+								</div>
+							  </div>	
+							  <div class="col-md-3"> 
+								<button class="btn btn-primary" type="button"    >创建</button>
+								<button class="btn btn-success" type="button"    >预览</button>
+								<button class="btn btn-danger" type="button"   >复制</button>
+								<button class="btn btn-danger" type="button"   >删除</button>
+							  </div>
+							  <div class="col-md-3"  >
+									<div class="input-group" style="width: 200px;">
+										<input type="number" class="form-control" placeholder="1页" style="width: 60px;">
+										<span class="input-group-addon">  / 1页, 共9条</span>
+										<div class="input-group-btn" >
+											<a class="btn btn-default  "  >
+												10
+												<span class="caret"></span>
+											</a> 
+										</div>
+
+										<span class="input-group-btn">
+											<button class="btn btn-primary" type="button"  >&larr;</button>
+											<button class="btn btn-primary" type="button"  >&rarr;</button>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row top-buffer" style = "margin-top:20px;">
+								<div class="col-md-3">
+									<div class="input-group">
+										<select class="form-control"   style="color:#ff00cc">
+											<option   value="wyk" style="color:#ff00cc;">wyk</option>
+										</select>
+									  <span class="input-group-btn">
+										<button class="btn btn-primary button-myself" type="button"  >
+											<span class="glyphicon glyphicon-plus"  ></span>
+										</button>
+										<button class="btn btn-danger button-myself" type="button"  >
+											<span class="glyphicon glyphicon-remove"  ></span>
+										</button>
+									  </span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div  >
+										<div class="input-group">
+											<span class="input-group-addon">
+												<span>Flow类型</span>
+											</span>
+											<select  class="form-control" id="flow_type_select"  >
+												<option  value="{{o.value}}">all</option>
+											</select>
+										</div>
+									
+									</div>
+								</div>
+								 
+							</div>
+							<div class="row top-buffer" >
+							<div class="col-md-9">
+									<div class="checkbox">
+										<label   style="margin-right: 25px;"><input type="checkbox" value="wyk"  >
+											<span class="label" style="color:#fff;background-color:#ff00cc;">wyk(1)</span></label>
+											<label   style="margin-right: 25px;"><input type="checkbox" value="spc"  >
+											<span class="label" style="color:#fff;background-color:#ffff00;">spc(3)</span></label>
+											<label   style="margin-right: 25px;"><input type="checkbox" value="zxh"  >
+											<span class="label" style="color:#fff;background-color:#00ff33;">zxh(14)</span></label>
+
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div> 
+				</div>
+						<div class="panel-body">
+						  <table  class="table">
+							<thead>
+								<tr>
+									<th><input name="Fruit" type="checkbox" value="" /></th>
+									<th>名称</th>
+									<th>类型</th>
+									<th>版本</th>
+									<th>创建时间</th>
+									<th>修改时间</th>
+								</tr>
+								</thead>
+									<tbody>
+										<tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr><tr >
+											<td><input name="Fruit" type="checkbox" value="" /></td>
+											<td ><a >dataflow_name_union</a></td>
+											<td><a >dataflow</a></td>
+											<td>1</td>		
+											<td>2017-01-12 17:49:13</td>	
+											<td>2017-01-12 17:49:13</td>	
+											<th><a>执行列表</a></th>
+										</tr>
+										</tbody>
+							</table>
+						</div>
+					</div>
+					 
+				</div>
+			</div> 
+        </div>
+    </section>
+
+</body>
+</html>
+
